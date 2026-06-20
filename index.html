@@ -4,785 +4,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazmul Haque Jowel | Security Researcher</title>
+    <title>Nazmul Haque Jowel — Security Researcher</title>
     <meta name="description"
-        content="Nazmul Haque Jowel — Security Researcher, Bug Bounty Hunter with 470+ HackerOne Rep and monetary rewards. Acknowledged by NASA, UN, WHO, Disney, Sony, Thomson Reuters.">
+        content="Nazmul Haque Jowel — Security Researcher & Bug Bounty Hunter. 470+ HackerOne reputation and monetary rewards. Recognised by NASA, the UN, WHO, Sony, the U.S. Dept. of Education, and more.">
+    <meta name="theme-color" content="#0B0F17">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nazmul Haque Jowel — Security Researcher">
+    <meta property="og:description"
+        content="Bug bounty hunter with 470+ HackerOne reputation. Recognised by NASA, the UN, WHO, Sony, and the U.S. Dept. of Education.">
+    <meta property="og:url" content="https://nazmulhaquejowel.tech/">
+    <meta property="og:image" content="https://nazmulhaquejowel.tech/assets/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Ambient background -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
 
-    <!-- Matrix Rain Canvas -->
-    <canvas id="matrix-canvas"></canvas>
-
-    <!-- Scanline Overlay -->
-    <div class="scanline-overlay"></div>
-
-    <!-- Navigation -->
+    <!-- ===================== NAV ===================== -->
     <nav id="main-nav">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo glitch-text" data-text="NHJ">NHJ</a>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-cmd active"><span class="prompt">&gt;</span> home</a></li>
-                <li><a href="#about" class="nav-cmd"><span class="prompt">&gt;</span> about</a></li>
-                <li><a href="#education" class="nav-cmd"><span class="prompt">&gt;</span> education</a></li>
-                <li><a href="#experience" class="nav-cmd"><span class="prompt">&gt;</span> experience</a></li>
-                <li><a href="#projects" class="nav-cmd"><span class="prompt">&gt;</span> projects</a></li>
-                <li><a href="#recognitions" class="nav-cmd"><span class="prompt">&gt;</span> hall_of_fame</a></li>
-                <li><a href="#skills" class="nav-cmd"><span class="prompt">&gt;</span> skills</a></li>
-                <li><a href="#contact" class="nav-cmd"><span class="prompt">&gt;</span> contact</a></li>
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">NHJ<span class="logo-dot">.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-cmd">About</a></li>
+                <li><a href="#recognitions" class="nav-cmd">Recognitions</a></li>
+                <li><a href="#experience" class="nav-cmd">Experience</a></li>
+                <li><a href="#projects" class="nav-cmd">Projects</a></li>
+                <li><a href="#skills" class="nav-cmd">Skills</a></li>
+                <li><a href="#contact" class="nav-cmd">Contact</a></li>
             </ul>
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav-right">
+                <a href="assets/Nazmul_Haque_Jowel_CV.pdf" class="nav-cv" download>Download CV</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <div class="profile-photo-wrapper">
-                <img src="assets/profile.jpg" alt="Nazmul Haque Jowel" class="profile-photo">
+    <!-- ===================== HERO ===================== -->
+    <header id="home" class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow"><span class="mono-prompt">$</span> whoami</p>
+                <h1 class="hero-name">Nazmul Haque <span class="grad">Jowel</span></h1>
+                <p class="hero-role">Security Researcher · Bug Bounty Hunter</p>
+                <p class="hero-tagline">
+                    I find and responsibly disclose critical web vulnerabilities — work that
+                    has earned <strong>470+ HackerOne reputation</strong>, monetary rewards,
+                    and recognition from some of the world's largest organisations.
+                </p>
+
+                <div class="hero-badges">
+                    <span class="badge"><span class="badge-dot"></span>470+ HackerOne Rep</span>
+                    <span class="badge"><span class="badge-dot"></span>Monetary Rewards</span>
+                    <span class="badge"><span class="badge-dot"></span>BugHunt 2026 Finalist</span>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#recognitions" class="btn btn-primary">View recognitions →</a>
+                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+                </div>
             </div>
-            <p class="hero-prefix">$ whoami</p>
-            <h1 class="glitch-text" data-text="Nazmul Haque Jowel">Nazmul Haque Jowel</h1>
-            <div class="typed-container">
-                <span class="typed-prefix">root@jowel:~$&nbsp;</span>
-                <span id="typed-text"></span>
-                <span class="cursor-blink">█</span>
+
+            <div class="hero-photo">
+                <div class="photo-frame">
+                    <img src="assets/profile.jpg" alt="Nazmul Haque Jowel" loading="eager">
+                </div>
+                <div class="photo-tag mono">root@jowel:~$</div>
             </div>
-            <div class="hero-badges">
-                <span class="badge">🛡️ Security Researcher</span>
-                <span class="badge">🐛 470+ HackerOne Rep</span>
-                <span class="badge">💰 Monetary Rewards</span>
-                <span class="badge">🏆 NASA · UN · WHO</span>
+        </div>
+
+        <!-- Recognised-by marquee -->
+        <div class="recog-strip">
+            <span class="recog-label mono">// recognised by</span>
+            <div class="recog-logos">
+                <span>NASA</span><span>United Nations</span><span>WHO</span><span>Sony</span>
+                <span>Disney</span><span>Thomson Reuters</span><span>Stanford</span>
+                <span>U.S. Dept. of Education</span><span>Bugcrowd</span><span>HackerOne</span>
             </div>
-            <div class="hero-cta-group">
-                <a href="#about" class="cta-btn">
-                    <span class="prompt">&gt;</span> cat about.txt
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="section reveal">
+            <div class="section-head">
+                <span class="section-index mono">01</span>
+                <h2 class="section-title">About</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p>
+                        I'm a security researcher based in Dhaka, Bangladesh, focused on
+                        offensive security — web application penetration testing, vulnerability
+                        discovery, and responsible disclosure. Since 2023 I've reported validated
+                        critical and high-severity findings across major bug bounty programs.
+                    </p>
+                    <p>
+                        I'm currently completing a B.Sc. in Software Engineering at Daffodil
+                        International University, where my thesis proposes a context-aware
+                        cybersecurity maturity framework for higher-education institutions.
+                    </p>
+
+                    <dl class="about-facts mono">
+                        <div><dt>location</dt><dd>Dhaka, Bangladesh</dd></div>
+                        <div><dt>university</dt><dd>Daffodil International University</dd></div>
+                        <div><dt>degree</dt><dd>B.Sc. Software Engineering</dd></div>
+                        <div><dt>cgpa</dt><dd>3.52 / 4.00</dd></div>
+                        <div><dt>graduation</dt><dd>Expected 2026</dd></div>
+                        <div><dt>focus</dt><dd>Offensive Security</dd></div>
+                    </dl>
+                </div>
+
+                <div class="stats-col">
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="470" data-suffix="+">0</span>
+                        <span class="stat-label">HackerOne reputation</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="9" data-suffix="+">0</span>
+                        <span class="stat-label">Hall-of-fame recognitions</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" data-target="3">0</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value tick">✓</span>
+                        <span class="stat-label">Monetary rewards earned</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== RECOGNITIONS ===================== -->
+        <section id="recognitions" class="section reveal">
+            <div class="section-head">
+                <span class="section-index mono">02</span>
+                <h2 class="section-title">Recognitions &amp; Hall of Fame</h2>
+            </div>
+            <p class="section-lede">
+                Public acknowledgements for responsibly disclosed vulnerabilities and security
+                work. Click any card to view the letter or certificate.
+            </p>
+
+            <div class="recog-gallery">
+                <button class="recog-card" type="button" onclick="openLightbox('assets/Nasa-Recognition.jpg')">
+                    <div class="recog-img"><img src="assets/Nasa-Recognition.jpg" alt="NASA Letter of Recognition" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">NASA</span><span class="recog-type">Letter of Recognition</span><span class="recog-year mono">2024</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/UN-Recognition.jpg')">
+                    <div class="recog-img"><img src="assets/UN-Recognition.jpg" alt="United Nations Hall of Fame" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">United Nations</span><span class="recog-type">Hall of Fame</span><span class="recog-year mono">2024</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/WHO-Recognition.jpg')">
+                    <div class="recog-img"><img src="assets/WHO-Recognition.jpg" alt="WHO Ethical Hacker Hall of Fame" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">World Health Organization</span><span class="recog-type">Ethical Hacker Hall of Fame</span><span class="recog-year mono">2024</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/Sony-Recognition.jpg')">
+                    <div class="recog-img"><img src="assets/Sony-Recognition.jpg" alt="Secure@Sony Recognition" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">Sony</span><span class="recog-type">Secure@Sony Recognition</span><span class="recog-year mono">2023</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/US-DoE-Recognition.jpg')">
+                    <div class="recog-img"><img src="assets/US-DoE-Recognition.jpg" alt="U.S. Department of Education Certificate" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">U.S. Dept. of Education</span><span class="recog-type">Certificate of Recognition</span><span class="recog-year mono">2024</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/Kahf-Guard-Pentest.jpg')">
+                    <div class="recog-img"><img src="assets/Kahf-Guard-Pentest.jpg" alt="Kahf Certificate of Recognition" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">Kahf Yazılım</span><span class="recog-type">Certificate of Recognition</span><span class="recog-year mono">2025</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/Bugcrowd-HackerCup-Top3.jpg')">
+                    <div class="recog-img"><img src="assets/Bugcrowd-HackerCup-Top3.jpg" alt="Bugcrowd HackerCup Top 3" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">Bugcrowd</span><span class="recog-type">HackerCup Top 3 Coin</span><span class="recog-year mono">2024</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/Bughunt-2026-Finalist.jpg')">
+                    <div class="recog-img"><img src="assets/Bughunt-2026-Finalist.jpg" alt="HackerOne BugHunt 2026 Finalist" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">HackerOne</span><span class="recog-type">BugHunt 2026 Finalist</span><span class="recog-year mono">2026</span></div>
+                </button>
+                <button class="recog-card" type="button" onclick="openLightbox('assets/One-Example-Of-Monetary-Reward.jpg')">
+                    <div class="recog-img"><img src="assets/One-Example-Of-Monetary-Reward.jpg" alt="Bug Bounty Monetary Reward" loading="lazy"></div>
+                    <div class="recog-meta"><span class="recog-org">Bug Bounty</span><span class="recog-type">Monetary Reward (example)</span><span class="recog-year mono">2024</span></div>
+                </button>
+            </div>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section id="experience" class="section reveal">
+            <div class="section-head">
+                <span class="section-index mono">03</span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <article class="tl-entry">
+                    <div class="tl-marker"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <h3>Security Researcher — Bug Bounty</h3>
+                            <span class="tl-period mono">Jan 2023 — Present</span>
+                        </div>
+                        <p class="tl-org">HackerOne · Remote</p>
+                        <ul class="tl-list">
+                            <li>Discovered and responsibly disclosed critical and high-severity web vulnerabilities.</li>
+                            <li>Earned <strong>470+</strong> reputation and monetary rewards through validated reports.</li>
+                            <li>Recognised by NASA, the UN, WHO, Disney, Sony, Thomson Reuters, and Stanford.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="tl-entry">
+                    <div class="tl-marker"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <h3>Security Consultant / Penetration Tester</h3>
+                            <span class="tl-period mono">2024 — 2025</span>
+                        </div>
+                        <p class="tl-org">Kahf Yazılım A.Ş · BPDB</p>
+                        <ul class="tl-list">
+                            <li>Performed web application penetration testing and security assessments.</li>
+                            <li>Delivered actionable reports with exploitation paths and remediation guidance.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="tl-entry">
+                    <div class="tl-marker"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <h3>CTF Organiser &amp; Problem Setter</h3>
+                            <span class="tl-period mono">2026</span>
+                        </div>
+                        <p class="tl-org">Cybersecurity Awareness Day — DIU</p>
+                        <ul class="tl-list">
+                            <li>Organised a university-wide Capture The Flag competition.</li>
+                            <li>Designed challenges spanning web security, OSINT, and real-world attack scenarios.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="section reveal">
+            <div class="section-head">
+                <span class="section-index mono">04</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Featured: thesis demo -->
+                <a class="project-card featured" href="https://nazmulhaquejowel.tech/context-aware-risk-model/" target="_blank" rel="noopener">
+                    <div class="project-badge mono">featured · thesis</div>
+                    <h3 class="project-name">Context-Aware Risk Model</h3>
+                    <p class="project-desc">
+                        Interactive demonstration of my thesis: a context-aware cybersecurity
+                        risk-rating model and institutional maturity self-assessment for
+                        higher-education, going beyond CVSS to weigh exploitability, asset
+                        criticality, and exposure.
+                    </p>
+                    <div class="project-tags">
+                        <span>Tailwind</span><span>Chart-free SVG</span><span>Vanilla JS</span><span>Research</span>
+                    </div>
+                    <span class="project-link">Open the live demo →</span>
                 </a>
-                <a href="assets/Nazmul_Haque_Jowel_CV.pdf" class="cv-btn" download>
-                    <span class="cv-icon">📄</span> Download CV
+
+                <a class="project-card" href="https://github.com/KafkaScribe/WiseCart" target="_blank" rel="noopener">
+                    <div class="project-thumb"><img src="assets/project-wisecart.png" alt="WiseCart" loading="lazy"></div>
+                    <h3 class="project-name">WiseCart</h3>
+                    <p class="project-desc">A smart product-comparison platform to find the best deals across online stores — compare prices and features in one place.</p>
+                    <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <span class="project-link">View on GitHub →</span>
+                </a>
+
+                <a class="project-card" href="https://github.com/KafkaScribe/tui_mor" target="_blank" rel="noopener">
+                    <div class="project-thumb"><img src="assets/project-tuimor.png" alt="tui_mor" loading="lazy"></div>
+                    <h3 class="project-name">tui_mor</h3>
+                    <p class="project-desc">A Flask app powered by deep learning to detect brain tumours from MRI scans — upload an image for instant AI-driven analysis.</p>
+                    <div class="project-tags"><span>Python</span><span>Flask</span><span>Deep Learning</span></div>
+                    <span class="project-link">View on GitHub →</span>
+                </a>
+
+                <a class="project-card" href="https://github.com/KafkaScribe/portfolio" target="_blank" rel="noopener">
+                    <div class="project-thumb"><img src="assets/project-portfolio-v1.png" alt="portfolio" loading="lazy"></div>
+                    <h3 class="project-name">portfolio</h3>
+                    <p class="project-desc">A clean, responsive showcase of security research, bug bounty achievements, and professional certifications.</p>
+                    <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <span class="project-link">View on GitHub →</span>
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About / Summary Section -->
-    <section id="about" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Summary</h2>
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">~/about.txt</span>
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="section reveal">
+            <div class="section-head">
+                <span class="section-index mono">05</span>
+                <h2 class="section-title">Skills &amp; Certifications</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3 class="skill-group-title mono">offensive_security</h3>
+                    <div class="skill-row"><span class="skill-name">Web App Security</span><div class="skill-track"><div class="skill-fill" data-percent="95"></div></div><span class="skill-pct mono">95</span></div>
+                    <div class="skill-row"><span class="skill-name">Penetration Testing</span><div class="skill-track"><div class="skill-fill" data-percent="90"></div></div><span class="skill-pct mono">90</span></div>
+                    <div class="skill-row"><span class="skill-name">Vulnerability Research</span><div class="skill-track"><div class="skill-fill" data-percent="90"></div></div><span class="skill-pct mono">90</span></div>
                 </div>
-                <div class="terminal-body">
-                    <p class="terminal-line">
-                        <span class="line-num">01</span>
-                        <span class="line-comment">// ─── Profile ───</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">02</span>
-                        <span class="accent">role</span>: <span class="string-val">"Security Researcher"</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">03</span>
-                        <span class="accent">focus</span>: <span class="string-val">"Web App Security, Pentesting, Vuln Discovery"</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">04</span>
-                        &nbsp;
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">05</span>
-                        <span class="line-comment">// ─── Recognized By ───</span>
-                    </p>
-                    <p class="terminal-line highlight-line">
-                        <span class="line-num">06</span>
-                        → <span class="accent">NASA</span> · <span class="accent">United Nations</span> · <span class="accent">WHO</span>
-                    </p>
-                    <p class="terminal-line highlight-line">
-                        <span class="line-num">07</span>
-                        → <span class="accent">Disney</span> · <span class="accent">Sony</span> · <span class="accent">Thomson Reuters</span>
-                    </p>
-                    <p class="terminal-line highlight-line">
-                        <span class="line-num">08</span>
-                        → <span class="accent">Stanford University</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">09</span>
-                        &nbsp;
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">10</span>
-                        <span class="line-comment">// ─── Bug Bounty ───</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">11</span>
-                        <span class="accent">platform</span>: <span class="string-val">"HackerOne"</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">12</span>
-                        <span class="accent">reputation</span>: <span class="accent">470+</span> · <span class="string-val">"Monetary Rewards"</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">13</span>
-                        &nbsp;
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">14</span>
-                        <span class="line-comment">// ─── Education ───</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">15</span>
-                        <span class="accent">degree</span>: <span class="string-val">"B.Sc. Software Engineering"</span>
-                    </p>
-                    <p class="terminal-line">
-                        <span class="line-num">16</span>
-                        <span class="accent">background</span>: <span class="string-val">"Offensive Security"</span>
-                    </p>
+                <div class="skill-group">
+                    <h3 class="skill-group-title mono">recon_osint</h3>
+                    <div class="skill-row"><span class="skill-name">Recon</span><div class="skill-track"><div class="skill-fill" data-percent="90"></div></div><span class="skill-pct mono">90</span></div>
+                    <div class="skill-row"><span class="skill-name">OSINT</span><div class="skill-track"><div class="skill-fill" data-percent="85"></div></div><span class="skill-pct mono">85</span></div>
+                    <div class="skill-row"><span class="skill-name">Asset Enumeration</span><div class="skill-track"><div class="skill-fill" data-percent="85"></div></div><span class="skill-pct mono">85</span></div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group-title mono">reporting</h3>
+                    <div class="skill-row"><span class="skill-name">Technical Reports</span><div class="skill-track"><div class="skill-fill" data-percent="90"></div></div><span class="skill-pct mono">90</span></div>
+                    <div class="skill-row"><span class="skill-name">Security Documentation</span><div class="skill-track"><div class="skill-fill" data-percent="85"></div></div><span class="skill-pct mono">85</span></div>
                 </div>
             </div>
 
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-value" data-target="470" data-suffix="+">0</span>
-                    <span class="stat-label">HackerOne Rep</span>
+            <div class="cert-tools">
+                <div class="certs">
+                    <h3 class="sub-title mono">certifications</h3>
+                    <ul class="cert-list">
+                        <li><span class="cert-mark">▹</span>Certified AppSec Practitioner v2 (CAP)</li>
+                        <li><span class="cert-mark">▹</span>Google Cybersecurity Professional Certificate</li>
+                        <li><span class="cert-mark">▹</span>Certified Cyber Security Analyst (C3SA)</li>
+                    </ul>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-value monetary-label">✓</span>
-                    <span class="stat-label">Monetary Rewards</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value" data-target="3">0</span>
-                    <span class="stat-label">Certifications</span>
-                </div>
-            </div>
-
-            <div class="info-grid">
-                <div class="info-item"><span class="info-key">name</span>: <span class="info-val">"Nazmul Haque
-                        Jowel"</span></div>
-                <div class="info-item"><span class="info-key">location</span>: <span class="info-val">"Dhaka,
-                        Bangladesh"</span></div>
-                <div class="info-item"><span class="info-key">university</span>: <span class="info-val">"Daffodil
-                        International University"</span></div>
-                <div class="info-item"><span class="info-key">degree</span>: <span class="info-val">"B.Sc. Software
-                        Engineering"</span></div>
-                <div class="info-item"><span class="info-key">cgpa</span>: <span class="info-val">3.52</span> / 4.00
-                </div>
-                <div class="info-item"><span class="info-key">graduation</span>: <span class="info-val">"Expected
-                        2026"</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Education</h2>
-
-            <div class="education-timeline">
-                <!-- Degree -->
-                <div class="edu-entry">
-                    <div class="edu-dot"></div>
-                    <div class="edu-line"></div>
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="terminal-title">~/education/degree.log</span>
-                        </div>
-                        <div class="terminal-body">
-                            <p class="terminal-line"><span class="accent">degree</span>: <span class="string-val">"B.Sc.
-                                    in Software Engineering"</span></p>
-                            <p class="terminal-line"><span class="accent">university</span>: <span
-                                    class="string-val">"Daffodil International University"</span></p>
-                            <p class="terminal-line"><span class="accent">location</span>: <span
-                                    class="string-val">"Dhaka, Bangladesh"</span></p>
-                            <p class="terminal-line"><span class="accent">period</span>: <span class="string-val">"2023
-                                    – 2026 (Expected)"</span></p>
-                            <p class="terminal-line"><span class="accent">cgpa</span>: <span class="accent">3.52</span>
-                                / 4.00</p>
-                            <p class="terminal-line">&nbsp;</p>
-                            <p class="terminal-line"><span class="line-comment">// Focus Areas</span></p>
-                            <p class="terminal-line">→ Web Application Security & Penetration Testing</p>
-                            <p class="terminal-line">→ Software Development & Architecture</p>
-                            <p class="terminal-line">→ Cybersecurity Research & Operations</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- HSC -->
-                <div class="edu-entry">
-                    <div class="edu-dot"></div>
-                    <div class="edu-line"></div>
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="terminal-title">~/education/hsc.log</span>
-                        </div>
-                        <div class="terminal-body">
-                            <p class="terminal-line"><span class="accent">level</span>: <span class="string-val">"Higher
-                                    Secondary Certificate (HSC)"</span></p>
-                            <p class="terminal-line"><span class="accent">group</span>: <span
-                                    class="string-val">"Science"</span></p>
-                            <p class="terminal-line"><span class="accent">status</span>: <span
-                                    class="string-val">"Completed"</span></p>
-                        </div>
+                <div class="tools">
+                    <h3 class="sub-title mono">toolkit</h3>
+                    <div class="tool-chips">
+                        <span>Burp Suite</span><span>Nmap</span><span>Nuclei</span><span>Subfinder</span><span>ffuf</span>
+                        <span>Python</span><span>Bash</span><span>Linux</span><span>Git</span><span>HackerOne</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Experience</h2>
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="section reveal">
+            <div class="section-head">
+                <span class="section-index mono">06</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <p class="section-lede">Open to security research roles, freelance pentesting, and collaboration. The fastest way to reach me:</p>
 
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">~/experience/bug_bounty.log</span>
-                </div>
-                <div class="terminal-body">
-                    <p class="terminal-line"><span class="accent">role</span>: <span class="string-val">"Security
-                            Researcher (Bug Bounty)"</span></p>
-                    <p class="terminal-line"><span class="accent">period</span>: <span class="string-val">"Jan 2023 –
-                            Present"</span></p>
-                    <p class="terminal-line"><span class="accent">platform</span>: <span
-                            class="string-val">"HackerOne"</span> — <span class="string-val">"Remote"</span></p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line"><span class="line-comment">// Achievements</span></p>
-                    <p class="terminal-line">→ Discovered and responsibly disclosed critical and</p>
-                    <p class="terminal-line">&nbsp; high-severity web vulnerabilities</p>
-                    <p class="terminal-line">→ Earned <span class="accent">470+</span> reputation points and</p>
-                    <p class="terminal-line">&nbsp; monetary rewards through validated reports</p>
-                    <p class="terminal-line">→ Received public recognition from <span class="accent">NASA</span>, <span
-                            class="accent">UN</span>,</p>
-                    <p class="terminal-line">&nbsp; <span class="accent">WHO</span>, <span class="accent">Disney</span>,
-                        <span class="accent">Sony</span>, <span class="accent">Reuters</span>, and <span
-                            class="accent">Stanford</span>
-                    </p>
+            <div class="contact-grid">
+                <a class="contact-card" href="mailto:jowel2305341452@diu.edu.bd">
+                    <span class="contact-key mono">email</span>
+                    <span class="contact-val">jowel2305341452@diu.edu.bd</span>
+                </a>
+                <a class="contact-card" href="tel:+8801974933788">
+                    <span class="contact-key mono">phone</span>
+                    <span class="contact-val">(+880) 1974933788</span>
+                </a>
+                <a class="contact-card" href="https://github.com/KafkaScribe" target="_blank" rel="noopener">
+                    <span class="contact-key mono">github</span>
+                    <span class="contact-val">github.com/KafkaScribe</span>
+                </a>
+                <div class="contact-card contact-static">
+                    <span class="contact-key mono">location</span>
+                    <span class="contact-val">Dhaka, Bangladesh</span>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">~/experience/consultant.log</span>
-                </div>
-                <div class="terminal-body">
-                    <p class="terminal-line"><span class="accent">role</span>: <span class="string-val">"Security
-                            Consultant / Penetration Tester"</span></p>
-                    <p class="terminal-line"><span class="accent">period</span>: <span class="string-val">"2024 –
-                            2025"</span></p>
-                    <p class="terminal-line"><span class="accent">org</span>: <span class="string-val">"Kahf Yazılım
-                            A.Ş, BPDB"</span></p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line"><span class="line-comment">// Responsibilities</span></p>
-                    <p class="terminal-line">→ Performed web application penetration testing</p>
-                    <p class="terminal-line">&nbsp; and security assessments</p>
-                    <p class="terminal-line">→ Delivered actionable reports with exploitation</p>
-                    <p class="terminal-line">&nbsp; paths and remediation guidance</p>
-                </div>
-            </div>
-
-            <!-- Leadership -->
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">~/experience/leadership.log</span>
-                </div>
-                <div class="terminal-body">
-                    <p class="terminal-line"><span class="accent">role</span>: <span class="string-val">"CTF Organizer &
-                            Problem Setter"</span></p>
-                    <p class="terminal-line"><span class="accent">period</span>: <span class="string-val">"2026"</span>
-                    </p>
-                    <p class="terminal-line"><span class="accent">event</span>: <span class="string-val">"Cybersecurity
-                            Awareness Day — DIU"</span></p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line">→ Organized university-wide Capture The Flag competition</p>
-                    <p class="terminal-line">→ Designed challenges covering web security, OSINT,</p>
-                    <p class="terminal-line">&nbsp; and real-world attack scenarios</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Projects &amp; Tools</h2>
-
-            <div class="projects-list">
-                <!-- WiseCart -->
-                <div class="terminal-window project-entry">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/projects/WiseCart</span>
-                    </div>
-                    <div class="achievement-img-wrap">
-                        <img src="assets/project-wisecart.png" alt="WiseCart" loading="lazy">
-                        <div class="achievement-overlay"><span class="view-icon">🔍</span></div>
-                    </div>
-                    <div class="terminal-body">
-                        <h3 class="project-name">WiseCart</h3>
-                        <p class="project-desc">A smart product comparison platform that helps users find the best deals across multiple online stores. Compare prices, features, and make informed buying decisions — all in one place.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/KafkaScribe/WiseCart" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- tui_mor -->
-                <div class="terminal-window project-entry">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/projects/tui_mor</span>
-                    </div>
-                    <div class="achievement-img-wrap">
-                        <img src="assets/project-tuimor.png" alt="tui_mor" loading="lazy">
-                        <div class="achievement-overlay"><span class="view-icon">🔍</span></div>
-                    </div>
-                    <div class="terminal-body">
-                        <h3 class="project-name">tui_mor</h3>
-                        <p class="project-desc">A Flask web application powered by deep learning to detect brain tumors from MRI images. Upload scans, get instant AI-driven analysis with visual results.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Flask</span>
-                            <span class="project-tag">Deep Learning</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                        <a href="https://github.com/KafkaScribe/tui_mor" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio v2 -->
-                <div class="terminal-window project-entry">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/projects/kafkascribe.github.io</span>
-                    </div>
-                    <div class="achievement-img-wrap">
-                        <img src="assets/project-portfolio-v2.png" alt="kafkascribe.github.io" loading="lazy">
-                        <div class="achievement-overlay"><span class="view-icon">🔍</span></div>
-                    </div>
-                    <div class="terminal-body">
-                        <h3 class="project-name">kafkascribe.github.io</h3>
-                        <p class="project-desc">Personal portfolio website built with a hacker-themed terminal UI, featuring matrix rain effects, cyberpunk aesthetics, and interactive terminal-style navigation.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/KafkaScribe/kafkascribe.github.io" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Portfolio v1 -->
-                <div class="terminal-window project-entry">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/projects/portfolio</span>
-                    </div>
-                    <div class="achievement-img-wrap">
-                        <img src="assets/project-portfolio-v1.png" alt="portfolio" loading="lazy">
-                        <div class="achievement-overlay"><span class="view-icon">🔍</span></div>
-                    </div>
-                    <div class="terminal-body">
-                        <h3 class="project-name">portfolio</h3>
-                        <p class="project-desc">First portfolio site — a clean, responsive showcase of security research work, bug bounty achievements, and professional certifications.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                        <a href="https://github.com/KafkaScribe/portfolio" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recognitions / Hall of Fame Section -->
-    <section id="recognitions" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Recognitions & Hall of Fame</h2>
-
-            <div class="achievement-gallery">
-                <!-- NASA -->
-                <div class="achievement-card" onclick="openLightbox('assets/Nasa-Recognition.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/Nasa-Recognition.jpg" alt="NASA Recognition Letter" loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">NASA</span>
-                        <span class="achievement-type">Letter of Recognition</span>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                </div>
-
-                <!-- Kahf -->
-                <div class="achievement-card" onclick="openLightbox('assets/Kahf-Guard-Pentest.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/Kahf-Guard-Pentest.jpg" alt="Kahf Certificate of Recognition" loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">Kahf Yazılım</span>
-                        <span class="achievement-type">Certificate of Recognition</span>
-                        <span class="achievement-year">2025</span>
-                    </div>
-                </div>
-
-                <!-- UN -->
-                <div class="achievement-card" onclick="openLightbox('assets/UN-Recognition.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/UN-Recognition.jpg" alt="United Nations Hall of Fame" loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">United Nations</span>
-                        <span class="achievement-type">Hall of Fame</span>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                </div>
-
-                <!-- WHO -->
-                <div class="achievement-card" onclick="openLightbox('assets/WHO-Recognition.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/WHO-Recognition.jpg" alt="WHO Ethical Hacker List" loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">World Health Organization</span>
-                        <span class="achievement-type">Ethical Hacker Hall of Fame</span>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                </div>
-
-                <!-- Sony -->
-                <div class="achievement-card" onclick="openLightbox('assets/Sony-Recognition.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/Sony-Recognition.jpg" alt="Secure@Sony Recognition" loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">Sony</span>
-                        <span class="achievement-type">Secure@Sony Recognition</span>
-                        <span class="achievement-year">2023</span>
-                    </div>
-                </div>
-
-                <!-- US DoE -->
-                <div class="achievement-card" onclick="openLightbox('assets/US-DoE-Recognition.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/US-DoE-Recognition.jpg" alt="U.S. Department of Education Certificate"
-                            loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">U.S. Dept. of Education</span>
-                        <span class="achievement-type">Certificate of Recognition</span>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                </div>
-
-                <!-- Bugcrowd -->
-                <div class="achievement-card" onclick="openLightbox('assets/Bugcrowd-HackerCup-Top3.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/Bugcrowd-HackerCup-Top3.jpg" alt="Bugcrowd HackerCup Top 3" loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">Bugcrowd</span>
-                        <span class="achievement-type">HackerCup Top 3 Coin</span>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                </div>
-
-                <!-- BugHunt 2026 -->
-                <div class="achievement-card" onclick="openLightbox('assets/Bughunt-2026-Finalist.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/Bughunt-2026-Finalist.jpg" alt="HackerOne BugHunt 2026 Finalist"
-                            loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">HackerOne</span>
-                        <span class="achievement-type">BugHunt 2026 Finalist</span>
-                        <span class="achievement-year">2026</span>
-                    </div>
-                </div>
-
-                <!-- Monetary Reward -->
-                <div class="achievement-card" onclick="openLightbox('assets/One-Example-Of-Monetary-Reward.jpg')">
-                    <div class="achievement-img-wrap">
-                        <img src="assets/One-Example-Of-Monetary-Reward.jpg" alt="Bug Bounty Monetary Reward"
-                            loading="lazy">
-                        <div class="achievement-overlay">
-                            <span class="view-icon">🔍</span>
-                        </div>
-                    </div>
-                    <div class="achievement-info">
-                        <span class="achievement-org">Bug Bounty</span>
-                        <span class="achievement-type">Monetary Reward Example</span>
-                        <span class="achievement-year">2024</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills & Certifications Section -->
-    <section id="skills" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Skills & Certifications</h2>
-
-            <div class="skills-columns">
-                <!-- Offensive Security -->
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/skills/offensive_security</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="skill-row">
-                            <span class="skill-name">Web App Security</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="95"></div>
-                            </div>
-                            <span class="skill-pct">95%</span>
-                        </div>
-                        <div class="skill-row">
-                            <span class="skill-name">Pentesting</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="90"></div>
-                            </div>
-                            <span class="skill-pct">90%</span>
-                        </div>
-                        <div class="skill-row">
-                            <span class="skill-name">Vuln Research</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="90"></div>
-                            </div>
-                            <span class="skill-pct">90%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recon & OSINT -->
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/skills/recon_osint</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="skill-row">
-                            <span class="skill-name">OSINT</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="85"></div>
-                            </div>
-                            <span class="skill-pct">85%</span>
-                        </div>
-                        <div class="skill-row">
-                            <span class="skill-name">Recon</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="90"></div>
-                            </div>
-                            <span class="skill-pct">90%</span>
-                        </div>
-                        <div class="skill-row">
-                            <span class="skill-name">Asset Enum</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="85"></div>
-                            </div>
-                            <span class="skill-pct">85%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reporting -->
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="terminal-title">~/skills/reporting</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="skill-row">
-                            <span class="skill-name">Technical Reports</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="90"></div>
-                            </div>
-                            <span class="skill-pct">90%</span>
-                        </div>
-                        <div class="skill-row">
-                            <span class="skill-name">Security Docs</span>
-                            <div class="skill-bar-track">
-                                <div class="skill-bar-fill" data-percent="85"></div>
-                            </div>
-                            <span class="skill-pct">85%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <h3 class="sub-title"><span class="prompt">&gt;</span> cat certifications.txt</h3>
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <span class="cert-icon">🏅</span>
-                    <span class="cert-name">Certified AppSec Practitioner v2 (CAP)</span>
-                </div>
-                <div class="cert-card">
-                    <span class="cert-icon">🏅</span>
-                    <span class="cert-name">Google Cybersecurity Professional Certificate</span>
-                </div>
-                <div class="cert-card">
-                    <span class="cert-icon">🏅</span>
-                    <span class="cert-name">Certified Cyber Security Analyst (C3SA)</span>
-                </div>
-            </div>
-
-            <!-- Tools -->
-            <h3 class="sub-title"><span class="prompt">&gt;</span> ls tools/</h3>
-            <div class="tools-grid">
-                <div class="tool-chip">Burp Suite</div>
-                <div class="tool-chip">Nmap</div>
-                <div class="tool-chip">Nuclei</div>
-                <div class="tool-chip">Subfinder</div>
-                <div class="tool-chip">ffuf</div>
-                <div class="tool-chip">Python</div>
-                <div class="tool-chip">Bash</div>
-                <div class="tool-chip">Linux</div>
-                <div class="tool-chip">Git</div>
-                <div class="tool-chip">HackerOne</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section reveal-section">
-        <div class="section-inner">
-            <h2 class="section-title"><span class="prompt">#</span> Contact</h2>
-
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">~/contact.sh</span>
-                </div>
-                <div class="terminal-body contact-terminal">
-                    <p class="terminal-line">
-                        <span class="accent">echo</span> $LOCATION
-                    </p>
-                    <p class="terminal-line output-line">
-                        → Dhaka, Bangladesh
-                    </p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line">
-                        <span class="accent">echo</span> $PHONE
-                    </p>
-                    <p class="terminal-line output-line">
-                        → <a href="tel:+8801974933788" class="contact-link">(+880) 1974933788</a>
-                    </p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line">
-                        <span class="accent">echo</span> $EMAIL
-                    </p>
-                    <p class="terminal-line output-line">
-                        → <a href="mailto:jowel2305341452@diu.edu.bd"
-                            class="contact-link">jowel2305341452@diu.edu.bd</a>
-                    </p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line">
-                        <span class="accent">echo</span> $GITHUB
-                    </p>
-                    <p class="terminal-line output-line">
-                        → <a href="https://github.com/KafkaScribe" target="_blank" rel="noopener"
-                            class="contact-link">github.com/KafkaScribe</a>
-                    </p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line">
-                        <span class="accent">echo</span> $LINKEDIN
-                    </p>
-                    <p class="terminal-line output-line">
-                        → <a href="#" target="_blank" rel="noopener" class="contact-link">LinkedIn Profile</a>
-                    </p>
-                    <p class="terminal-line">&nbsp;</p>
-                    <p class="terminal-line">
-                        <span class="accent">echo</span> $HACKERONE
-                    </p>
-                    <p class="terminal-line output-line">
-                        → <a href="#" target="_blank" rel="noopener" class="contact-link">HackerOne (470+ Rep)</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- ===================== FOOTER ===================== -->
     <footer id="footer">
-        <p>&copy; 2026 <span class="accent">Nazmul Haque Jowel</span> &middot; All systems operational.</p>
-        <p class="footer-sub">Built with <span class="accent">&lt;/code&gt;</span> and ☕</p>
+        <div class="footer-inner">
+            <span>&copy; 2026 Nazmul Haque Jowel</span>
+            <span class="mono footer-status"><span class="status-dot"></span>all systems operational</span>
+        </div>
     </footer>
 
-    <!-- Lightbox Overlay -->
-    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" class="lightbox-img" alt="Achievement Screenshot">
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lightbox-img" class="lightbox-img" alt="Recognition document">
     </div>
 
     <script src="script.js"></script>
